@@ -158,10 +158,6 @@ public class UpdateDialog extends Dialog implements View.OnClickListener, OnUpda
                 buttonClickListener.onButtonClick(OnButtonClickListener.CANCEL);
             }
         } else if (id == R.id.btn_update) {
-            if (!forcedUpgrade) {
-                onDismiss();
-
-            }
             //回调点击事件
             if (buttonClickListener != null) {
                 buttonClickListener.onButtonClick(OnButtonClickListener.UPDATE);
@@ -190,7 +186,10 @@ public class UpdateDialog extends Dialog implements View.OnClickListener, OnUpda
                 context.startService(new Intent(context, DownloadService.class));
                 update.setText("正在下载");
             }
+            if (!forcedUpgrade) {
+                onDismiss();
 
+            }
         }
     }
 
@@ -208,6 +207,5 @@ public class UpdateDialog extends Dialog implements View.OnClickListener, OnUpda
 
     public void onDismiss() {
         dismiss();
-        DownloadManager.getInstance().release();
     }
 }

@@ -85,16 +85,14 @@
     <View
         android:id="@+id/line"
         android:layout_width="2dp"
-        android:layout_height="30dp"
+        android:layout_height="15dp"
         android:layout_gravity="center"
-        android:background="@android:color/white"
-        android:visibility="gone" />
+        android:background="@android:color/white" />
 
     <ImageButton
         android:id="@+id/ib_close"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:background="@drawable/ic_dialog_close"
-        android:visibility="gone" />
+        android:background="@drawable/ic_dialog_close" />
 </LinearLayout>

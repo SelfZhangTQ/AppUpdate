@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                                         .setApkName("hxq.apk")
                                         .setApkUrl("http://download.huoli666.com/upgrade/app-AliBB-release.apk")
                                         .setDownloadPath(Environment.getExternalStorageDirectory() + "/AppUpdate")
-                                        .setConfiguration(new UpdateConfiguration().setEnableLog(false).setForcedUpgrade(true).setDefaultDialogStyle(false))
+                                        .setConfiguration(new UpdateConfiguration().setEnableLog(false).setForcedUpgrade(false).setDefaultDialogStyle(false))
                                         .setDialogStyle("1")
                                         .setSmallIcon(R.mipmap.ic_launcher)
                                         .setApkVersionCode("6")
